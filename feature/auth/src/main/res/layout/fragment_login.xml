@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:theme="@style/Base.Theme.Derana"
+    tools:context=".ui.login.fragments.login.LoginFragment">
+
+<!--    Form-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/background_form_input"
+>
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_email"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputLayout"
+
+            android:hint="Alamat Email"
+            app:boxBackgroundColor="@color/tranparant"
+            app:boxStrokeColor="@color/tranparant"
+            app:boxBackgroundMode="none"
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmail"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/background_form_input"
+        android:layout_marginVertical="10dp"
+        >
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_password"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputEmail"
+
+            android:hint="Kata kunci"
+            app:boxBackgroundColor="@color/tranparant"
+            app:boxStrokeColor="@color/tranparant"
+            app:boxBackgroundMode="none"
+
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPassword"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:buttonTint="@color/primaryColor"
+            android:text="Ingat saya"
+            android:paddingStart="5dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/checkboxRemember"
+            android:textSize="16sp"
+            android:layout_weight="0"
+            android:fontFamily="@font/jakarta_sans_reguler"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lupa kata sandi?"
+
+            android:layout_gravity="end|center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_marginEnd="20dp"
+            android:padding="8dp"
+            android:fontFamily="@font/jakarta_sans_semibold"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@color/primaryColor"
+        android:text="Masuk"
+        android:layout_marginHorizontal="20dp"
+        android:textAllCaps="false"
+        android:elegantTextHeight="true"
+        android:textStyle="bold"
+        android:fontFamily="@font/jakarta_sans_semibold"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atau masuk dengan"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/abu_abu"
+        android:fontFamily="@font/jakarta_sans_semibold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginEnd="10dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:drawableStart="@drawable/ic_google"
+            android:padding="10dp"
+            android:text="Google"
+            android:fontFamily="@font/jakarta_sans_reguler"
+            android:textAllCaps="false"
+            android:textColor="@color/abu_abu"
+            android:id="@+id/btnAltGoogle"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="170dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:drawableStart="@drawable/ic_facebook"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="Facebook"
+            android:fontFamily="@font/jakarta_sans_reguler"
+            android:textAllCaps="false"
+            android:textColor="@color/abu_abu"
+            android:id="@+id/btnAltFacebook"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

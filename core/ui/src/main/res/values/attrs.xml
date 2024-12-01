@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DeranaEditTextWithIcon">
+        <attr name="leadingIcon" format="reference" />
+        <attr name="labelText" format="string" />
+        <attr name="placeholderText" format="string" />
+        <attr name="android:inputType" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DeranaButtonWithLabel">
+        <attr name="icon" format="reference" />
+        <attr name="label" format="string" />
+    </declare-styleable>
+</resources>

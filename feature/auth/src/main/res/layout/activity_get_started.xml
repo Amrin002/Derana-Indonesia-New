@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:theme="@style/Base.Theme.Derana"
+    android:layout_height="match_parent"
+    tools:context=".ui.getstarted.GetStartedActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/topHalf"
+        android:background="@color/primaryColor"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtGetStarted1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/jakarta_sans_bold"
+        android:text="Selamat datang di Derana"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtGetStarted1"
+        android:id="@+id/vpGetStarted"
+        android:layout_marginTop="20dp"
+
+        />
+    <LinearLayout
+        android:layout_marginTop="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vpGetStarted"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+
+        >
+        <!--        sebagai tanda perpindahan view pager-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/rounded_tab"
+            android:id="@+id/vp1"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/rounded_tab"
+            android:id="@+id/vp2"
+            android:layout_marginStart="10dp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/rounded_tab"
+            android:id="@+id/vp3"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/loginGoogle"
+        android:text="Masuk Dengan Facebook"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:fontFamily="@font/jakarta_sans_semibold"
+        android:elegantTextHeight="true"
+        android:textColor="#6D6D6D"
+        android:elevation="0dp"
+        android:background="@drawable/facebook_background"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:drawablePadding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/loginFacebook"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lblRegister"
+        android:text="Masuk Dengan Google"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:fontFamily="@font/jakarta_sans_semibold"
+        android:textColor="@color/white"
+        android:background="@drawable/google_background"
+        android:drawableStart="@drawable/ic_google"
+        android:drawablePadding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/loginGoogle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblRegister"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="50dp"
+
+        >
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum Punya akun?"
+        android:textColor="#898989"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Disini"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/primaryColor"
+        android:fontFamily="@font/jakarta_sans_semibold"
+        android:textStyle="bold"
+        android:id="@+id/Register"
+        />
+    </LinearLayout>
+</RelativeLayout>

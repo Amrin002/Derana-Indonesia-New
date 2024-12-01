@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Base.Theme.Derana"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.page.beranda.BerandaFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/viewHome"
+            android:background="@color/secondaryColor"/>
+        <RelativeLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:id="@+id/search_bar"
+                android:layout_alignEnd="@id/avatar_icon"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/search_background"
+                android:hint="@string/mau_belajar_apa_hari_ini"
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/search_ic"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginEnd="56dp"
+                android:backgroundTint="@color/backgroundSearch"
+                android:fontFamily="@font/jakarta_sans_reguler"
+                android:textSize="13sp"
+                />
+
+            <!-- Avatar Icon -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatar_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignBottom="@id/search_bar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/avatar"
+                app:elevation="10dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"
+                app:useCompatPadding="true" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_below="@id/appBar"
+            android:id="@+id/txtContribute"
+            android:layout_width="215dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/textcontribute" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/button_rounded"
+            android:textAllCaps="false"
+            android:id="@+id/btnContribute"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/txtContribute"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:fontFamily="@font/jakarta_sans_reguler"
+            android:textStyle="normal"
+            android:elegantTextHeight="true"
+            android:text="Daftar di sini"
+            android:layout_alignStart="@id/txtContribute"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/imgContribute"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_alignEnd="@id/txtContribute"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/appBar"
+            android:src="@drawable/berandakontribusi"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="-8dp"
+            android:layout_below="@id/imgContribute"
+            android:background="@drawable/all_rounded_background"
+            android:backgroundTint="@color/white"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_derana"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"/>
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Bantu kami melengkapi data bahasa daerah kamu"
+                tools:ignore="HardcodedText"
+                android:fontFamily="@font/jakarta_sans_semibold"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="@color/abu_abu"
+                android:justificationMode="inter_character"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/formulir"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="@color/primaryColor"
+                android:fontFamily="@font/jakarta_sans_semibold"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:elegantTextHeight="true"
+                android:textColor="@color/white"
+                android:text="Selanjutnya"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHome"
+
+            android:gravity="center"
+            android:id="@+id/fiturMenus">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="4"
+                android:alignmentMode="alignMargins"
+                android:rowOrderPreserved="false"
+                android:columnOrderPreserved="false"
+                android:padding="16dp"
+                android:useDefaultMargins="true"
+                android:layout_gravity="center">
+
+                <!-- BtnKamusbahasa -->
+                <RelativeLayout
+                    android:id="@+id/BtnKamusbahasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgKamusbahasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/kamusbahasa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgKamusbahasa"
+                        android:text="Kamus\nBahasa"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnPenerjemaah -->
+                <RelativeLayout
+                    android:id="@+id/BtnPenerjemaah"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    >
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgPenerjemaah"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/penerjemah" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgPenerjemaah"
+                        android:text="Penerjemah"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnDatabahasa -->
+                <RelativeLayout
+                    android:id="@+id/BtnDatabahasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgDatabahasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/databahasa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgDatabahasa"
+                        android:text="Data\nBahasa"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnPetabahasa -->
+                <RelativeLayout
+                    android:id="@+id/BtnPetabahasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgPetabahasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/petabahasa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgPetabahasa"
+                        android:text="Peta\nBahasa"
+                        android:textSize="12sp"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnVitalitasbahasa -->
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/BtnVitalitasbahasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgVitalitas"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/vitalitas_bahasa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgVitalitas"
+                        android:text="Vitalitas\nBahasa"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnVideobahasa -->
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/BtnVideobahasa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgVideobahasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/video_bahasa" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgVideobahasa"
+                        android:text="Video\nBahasa"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnBukudigital -->
+                <RelativeLayout
+                    android:id="@+id/BtnBukudigital"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgBukudigital"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/buku_digital"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgBukudigital"
+                        android:text="Buku\nDigital"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!-- BtnLainnya -->
+                <RelativeLayout
+                    android:id="@+id/BtnLainnya"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    >
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgLainnya"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:src="@drawable/lainnya" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgLainnya"
+                        android:text="Lainnya"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+            </GridLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fiturMenus"
+            android:id="@+id/ayoBelajar"
+            >
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ayo, belajar bahasa daerah"
+                    android:fontFamily="@font/jakarta_sans_bold"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pelajari bahasa-bahasa daerah di Indonesia"
+                    android:fontFamily="@font/jakarta_sans_reguler"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    />
+                <HorizontalScrollView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:layout_marginVertical="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp">
+
+                        <!--                        Ganti dengan Recycler view-->
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:shadowColor="@color/tranparant"
+                            android:background="@drawable/shape_button_active"
+                            android:textColor="@color/white"
+                            android:text="Bahasa daerah"
+                            android:fontFamily="@font/jakarta_sans_semibold"
+                            android:textStyle="bold"
+                            android:elegantTextHeight="true"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+                            /><androidx.appcompat.widget.AppCompatButton
+                        android:textAllCaps="false"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_button"
+                        android:textColor="@color/black"
+                        android:text="Bahasa Buru"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/jakarta_sans_reguler"
+                        android:textSize="12sp"
+                        />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button"
+                            android:textColor="@color/black"
+                            android:text="Bahasa Alune"
+                            android:fontFamily="@font/jakarta_sans_reguler"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button"
+                            android:textColor="@color/black"
+                            android:text="Bahasa Yatoke"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/jakarta_sans_reguler"
+                            android:textSize="12sp"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/shape_button"
+                            android:textColor="@color/black"
+                            android:text="Bahasa Dalwone"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/jakarta_sans_reguler"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/ayoBelajar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/highlightLayout1"
+            android:layout_marginTop="10dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rvBelajar"/>
+        </RelativeLayout>
+    </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

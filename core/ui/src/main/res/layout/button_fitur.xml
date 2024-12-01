@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/BtnKamusbahasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:src="@drawable/kamusbahasa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgIcon"
+            android:text="Kamus\nBahasa"
+            android:textSize="12sp"
+            android:id="@+id/tvLabel"
+            android:textColor="@color/black"
+            android:textAlignment="center" />
+    </RelativeLayout>
+</merge>
